@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asistente académico — Escribir para soñar</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="header">
+      <div class="brand-left">
+        <img src="/static/img/profe.png" class="avatar" alt="Asistente"/>
+        <div class="titles">
+          <h1>Asistente académico — Proyecto “Escribir para soñar”</h1>
+          <p class="byline">Proyecto desarrollado por Lucy Yamile Riaño Cubides · Mireya Guerrero Albadan · Alexjaider Mesa Herrera</p>
+        </div>
+      </div>
+      <img src="/static/img/logo_uniminuto.png" class="logo-uni" alt="UNIMINUTO"/>
+    </header>
+
+    <main class="chat-container">
+      <div class="banner-bienvenida">
+        <p>👋 Hola, soy tu asistente del proyecto. ¡Cuéntame qué quieres saber de <b>“Escribir para soñar”</b>!</p>
+      </div>
+
+      <details class="tips" open>
+        <summary>💡 ¿Cómo preguntar para obtener mejores respuestas?</summary>
+        <ul>
+          <li>“¿Cuál es el <b>objetivo general</b> del proyecto Escribir para soñar?”</li>
+          <li>“¿Cuáles son los <b>objetivos específicos</b>?”</li>
+          <li>“¿En qué <b>colegio</b> se desarrolla el proyecto?”</li>
+          <li>“¿Qué <b>metodología</b> se usa y por qué?”</li>
+          <li>“Dame un <b>resumen</b> de la justificación.”</li>
+        </ul>
+      </details>
+
+      <div id="chatbox" class="chatbox"></div>
+
+      <div class="input-area">
+        <input type="text" id="pregunta" placeholder="Escribe tu pregunta aquí..." />
+        <label class="toggle"><input type="checkbox" id="shortMode"><span>Respuesta breve</span></label>
+        <button id="btnEnviar">Enviar</button>
+        {% if admin %}
+          <button id="btnReindex" class="btn-ghost" title="Reconstruir índice con /data">Reindexar</button>
+          <span class="admin-badge" title="Modo administrador activo">ADMIN</span>
+        {% endif %}
+      </div>
+    </main>
+
+    <footer class="footer-legal">
+      <div class="legal-text">© Derechos de autor — El contenido del proyecto “Escribir para soñar” pertenece a Lucy Yamile Riaño Cubides · Mireya Guerrero Albadan · Alexjaider Mesa Herrera. Su reproducción total o parcial está prohibida sin autorización expresa de los autores.</div>
+      <div class="credit">Chatbot programado por Nataly Antonio Perez</div>
+    </footer>
+
+    <audio id="sonido" src="/static/sound/pop.wav" preload="auto"></audio>
+  </div>
+  <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+Flask>=3.0
+gunicorn
+numpy
+PyPDF2
+python-docx
+python-dotenv
+openai>=1.40.0
+itsdangerous
